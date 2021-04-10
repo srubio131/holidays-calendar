@@ -1,0 +1,33 @@
+export const CITIES = {
+  MADRID: "Madrid",
+  VALENCIA: "Valencia",
+  ALICANTE: "Alicante",
+  GRAN_CANARIAS: "Las Palmas de Gran Canaria"
+}
+export const CITIES_OPTIONS = Object.keys(CITIES).map((key) => ({ label: key, value: key }))
+
+export const HOLIDAYS_TYPES = {
+  NACIONAL: 'Nacional',
+  AUTONOMICO: 'Autonomico',
+  LOCAL: 'Local'
+}
+
+export const HOLIDAYS_NACIONAL = ['2021-01-01','2021-01-06','2021-04-02','2021-05-01','2021-10-12','2021-11-01','2021-12-06','2021-12-08','2021-12-25']
+export const HOLIDAYS_BY_CITY = {
+  [CITIES.MADRID]: {
+    [HOLIDAYS_TYPES.AUTONOMICO]: ['2021-03-19','2021-04-01','2021-05-03'],
+    [HOLIDAYS_TYPES.LOCAL]: ['2021-05-15','2021-11-09']
+  },
+  [CITIES.VALENCIA]: {
+    [HOLIDAYS_TYPES.AUTONOMICO]: ['2021-03-19','2021-04-05','2021-06-24', '2021-10-09'],
+    [HOLIDAYS_TYPES.LOCAL]: ['2021-01-22','2021-04-12']
+  },
+  [CITIES.ALICANTE]: {
+    [HOLIDAYS_TYPES.AUTONOMICO]: ['2021-03-19','2021-04-05','2021-06-24', '2021-10-09'],
+    [HOLIDAYS_TYPES.LOCAL]: ['2021-04-15','2021-06-23']
+  },
+  [CITIES.GRAN_CANARIAS]: {
+    [HOLIDAYS_TYPES.AUTONOMICO]: ['2021-04-01','2021-08-16'],
+    [HOLIDAYS_TYPES.LOCAL]: ['2021-02-16','2021-06-24']
+  }
+}
