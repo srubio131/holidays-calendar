@@ -6,12 +6,15 @@
   "author": "srubio131 <s.rubio131@gmail.com>",
   "private": true,
   "scripts": {
+    "start:prod": "node server.js",
+    "build": "quasar build",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "quasar": "^1.0.0",
     "vue-cal": "^3.10.1"
   },
