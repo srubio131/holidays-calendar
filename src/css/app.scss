@@ -28,10 +28,17 @@
 .bg-autonomico { background-color: $autonomico; }
 .bg-local { background-color: $local; }
 
+.vuecal__cell { min-height: 100px;  }
+.vuecal--month-view .vuecal__cell-content { justify-content: start !important; }
+.vuecal--month-view .vuecal__cell-date { text-align: end; }
+.vuecal--month-view .vuecal__cell--day6,
+.vuecal--month-view .vuecal__cell--day7 {
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, #f2f2f2 10px, #f2f2f2 20px);
+}
 .vuecal__event {
   &.Nacional {
     color: black;
-    div.vuecal__event-content {
+    div {
       @extend .bg-nacional;
     }
   }

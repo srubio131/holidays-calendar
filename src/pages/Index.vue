@@ -12,15 +12,14 @@
       </q-chip>
     </div>
     <vue-cal
-        :background="true"
         :time="false"
         :events="events"
         :selected-date="selectedDate"
+        :cell-click-hold="false"
         locale="es"
         active-view="month"
         hide-view-selector
-        events-on-month-view
-        out-of-scope-events
+        events-on-month-view="short"
         :style="{ width: '95%' }">
     </vue-cal>
   </q-page>
@@ -69,7 +68,7 @@ export default {
       return {
         start: holidayDate,
         end: holidayDate,
-        content: `${icon} ${contentText} (${cityKey ? cityKey : 'España'})`,
+        title: `${icon} ${contentText} (${cityKey ? cityKey : 'España'})`,
         class: type,
         deletable: false,
         resizable: false,
